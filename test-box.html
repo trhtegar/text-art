@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Zig-Zag</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+        }
+
+        .box {
+            position: absolute;
+            z-index: 2;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 10px;
+            animation: zigzag 3s infinite ease-in-out;
+        }
+        .h1a{
+            position: absolute;
+            z-index: 2;
+            width: 20px;
+            height: 100px;
+            top: 250px;
+            right: 1050px;
+            background-color: #222;
+            animation: h1key 2.5s ease-in-out forwards;
+        }
+
+        .h1b{
+            position: absolute;
+            z-index: 2;
+            width: 20px;
+            height: 100px;
+            top: 250px;
+            right: 1002px;
+            background-color: #222;
+            animation: h2key 2.5s ease-in-out forwards;
+        }
+
+        .h1c{
+            position: absolute;
+            z-index: 2;
+            width: 80px;
+            height: 18px;
+            top: 284px;
+            right: 1002px;
+            background-color: #222;
+            animation: h3key 2.5s ease-in-out forwards;
+        }
+        .a1a{
+
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 18px;
+            top: 284px;
+            right: 920px;
+            background-color: #222;
+            rotate: -72deg;
+            animation: a1key 2.5s ease-in-out forwards; 
+
+        }
+
+        .a1b{
+
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 18px;
+            top: 284px;
+            right: 888px;
+            background-color: #222;
+            rotate: 72deg;
+            animation: a2key 2.5s ease-in-out forwards; 
+
+
+        }
+        .s1a{        
+            position: absolute;
+            z-index: 2;
+            width: 70px;
+            height: 26px;
+            top: 254px;
+            right: 838px;
+            background-color: #222;
+            animation: s1key 2.5s ease-in-out forwards;
+            transition-delay: 1s;
+
+        }
+
+        .s1b{        
+            position: absolute;
+            z-index: 2;
+            width: 70px;
+            height: 26px;
+            top: 314px;
+            right: 836px;
+            background-color: #222;
+            animation: s3key 2.5s ease-in-out forwards;
+        }
+
+        .s1c{        
+            position: absolute;
+            z-index: 2;
+            width: 80px;
+            height: 30px;
+            top: 280px;
+            right: 830px;
+            background-color: #222;
+            rotate:30deg;
+            border-radius: 8px;
+            transition-delay: 2s;
+            animation: s2key 2.5s ease-in-out forwards;
+        }
+        .h2a{
+             position: absolute;
+            z-index: 2;
+            width: 20px;
+            height: 100px;
+            top: 250px;
+            right: 806px;
+            background-color: #222;
+            animation: h1key 2.5s ease-in-out forwards;
+        }
+
+        .h2b{
+            position: absolute;
+            z-index: 2;
+            width: 20px;
+            height: 100px;
+            top: 250px;
+            right: 756px;
+            background-color: #222;
+            animation: h2key 2.5s ease-in-out forwards;
+        }
+
+        .h2c{
+                
+            position: absolute;
+            z-index: 2;
+            width: 30px;
+            height: 24px;
+            top: 282px;
+            right: 754px;
+            background-color: #222;
+            animation: s1key 2.5s ease-in-out forwards;
+        }
+        .i1a{
+            position: absolute;
+            z-index: 2;
+            width: 22px;
+            height: 100px;
+            top: 250px;
+            right: 724px;
+            background-color: #222;
+            animation: h1key 2.5s ease-in-out forwards;            
+        }
+        /*------------------------------------------( Tech ) section --------------------------------------------------*/
+        .t1a{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 22px;
+            top: 252px;
+            right: 600px;
+            background-color: #222;
+            animation: s1key 1.5s ease-in-out forwards;            
+        }
+        .t1b{
+            position: absolute;
+            z-index: 2;
+            width: 24px;
+            height: 100px;
+            top: 254px;
+            right: 623px;
+            background-color: #222;
+            animation: h2key 2.5s ease-in-out forwards;            
+        }
+        .e1a{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 22px;
+            top: 254px;
+            right: 523px;
+            background-color: #222;
+            animation: s3key 2.5s ease-in-out forwards;
+        }
+
+        .e1b{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 22px;
+            top: 284px;
+            right: 523px;
+            background-color: #222;
+            animation: s1key 2.5s ease-in-out forwards;
+        }
+        .e1c{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 22px;
+            top: 314px;
+            right: 523px;
+            background-color: #222;
+            animation: s3key 2.5s ease-in-out forwards;
+        }
+        .c1a{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 28px;
+            top: 254px;
+            right: 440px;
+            background-color: #222;
+            animation: s1key 2.5s ease-in-out forwards;
+
+        }
+        .c1b{
+            position: absolute;
+            z-index: 2;
+            width: 22px;
+            height: 100px;
+            top: 245px;
+            right: 492px;
+            background-color: #222;
+            animation: h1key 2.5s ease-in-out forwards;
+        }
+        .c1c{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 32px;
+            top: 305px;
+            right: 440px;
+            background-color: #222;
+            animation: s3key 2.5s ease-in-out forwards;
+        }
+        .h3a{
+            position: absolute;
+            z-index: 2;
+            width: 22px;
+            height: 100px;
+            top: 250px;
+            right: 410px;
+            background-color: #222;
+            animation: h1key 2.5s ease-in-out forwards;
+        }
+
+        .h3b{
+            position: absolute;
+            z-index: 2;
+            width: 22px;
+            height: 100px;
+            top: 250px;
+            right: 360px;
+            background-color: #222;
+            animation: h2key 2.5s ease-in-out forwards;
+        }
+        .h3c{
+            position: absolute;
+            z-index: 2;
+            width: 100px;
+            height: 22px;
+            top: 284px;
+            right: 360px;
+            background-color: #222;
+            animation: s3key 2.5s ease-in-out forwards;
+
+        }
+        .logo img{
+            object-fit: cover;
+            width: 800px;
+            animation-delay: 5s;
+        }
+         .animate-logo {
+            animation: moveRight 2.5s ease-in-out forwards; /* Bergeser ke kanan */
+        }
+        @keyframes s1key{
+            0%{
+                transform: translate(0,0);
+                width:80px;
+            }
+            100%{
+                transform: translate(-70px,0);
+                width:0px;
+            }
+        }
+
+        @keyframes s2key{
+            0%{
+                top: 280px;
+                transform: translate(0,0);
+                width:80px;
+            }
+            100%{
+                top: 302px;
+                transform: translate(-80px,0);
+                width:0px;
+            }
+        }
+
+        @keyframes s3key{
+            0%{
+                transform: translate(0,0);
+                width:80px;
+            }
+            100%{
+                transform: translate(0,0);
+                width:0px;
+            }
+        }
+        @keyframes a1key{
+            0%{
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(100px,0);
+            }
+
+        }
+        @keyframes a2key{
+            0%{
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(100px,0px);
+            }
+
+        }
+        @keyframes h1key{
+            0%{
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(0, -100px); /* Kembali ke bawah */
+            }
+        }
+
+        @keyframes h2key{
+            0%{
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(0, 100px); */
+            }
+        }
+        @keyframes h3key{
+            0%{
+                transform: translate(0,0);
+            }
+            100% {
+                transform: translate(-100px, 0px); /* Kembali ke kiri-bawah */
+            }
+        }
+          /* Animasi bergeser ke kanan */
+        @keyframes moveRight {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(200px); /* Bergeser ke kanan sejauh 200px */
+            }
+        }
+
+         .hide-char {
+            opacity: 0; /* Hilangkan char_H */
+            display: none; /* Sembunyikan setelah animasi selesai */
+        }
+        .logo2 {
+            z-index: 3;
+            opacity: 0;
+            display: none;
+            position: absolute;
+            right: 980px;
+            width: 200px;
+            object-fit: cover;
+        }
+        .active_icon{
+            opacity: 1;
+            display: inline-block;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="logo2">
+        <img src="hashi_icon.png">
+    </div>
+    <div class="logo">
+        <img src="Hashi_tech_w2.png">
+    </div>
+    <div class="character char_H">
+        <div class="h1a"></div>
+        <div class="h1b"></div>
+        <div class="h1c"></div>
+    </div>
+    <div class="character char_A">
+        <div class="a1a"></div>
+        <div class="a1b"></div>
+    </div>
+    
+    <div class="character char_S">
+        <div class="s1a"></div>
+        <div class="s1b"></div>
+        <div class="s1c"></div>
+        <div class="s1d"></div>
+    </div>
+    
+    <div class="character char_H2">
+        <div class="h2a"></div>
+        <div class="h2b"></div>
+        <div class="h2c"></div>
+    </div>
+    
+    <div class="character char_I">
+        <div class="i1a"></div>
+    </div>
+
+    <div class="character char_T">
+        <div class="t1a"></div>
+        <div class="t1b"></div>
+    </div>
+    <div class="character char_E">
+        <div class="e1a"></div>
+        <div class="e1b"></div>
+        <div class="e1c"></div>
+    </div>
+    <div class="character char_C">
+        <div class="c1a"></div>
+        <div class="c1b"></div>
+        <div class="c1c"></div>
+    </div>
+    <div class="character char_H3">
+        <div class="h3a"></div>
+        <div class="h3b"></div>
+        <div class="h3c"></div>
+    </div>
+     <script>
+        // Menunggu 4 detik sebelum menjalankan animasi
+        setTimeout(() => {
+            // Tambahkan kelas untuk memulai animasi
+            document.querySelector('.logo').classList.add('animate-logo');
+            document.querySelector('.character').classList.add('hide-char');
+            document.querySelector('.logo2').classList.add('active_icon');
+        }, 3000); // 3000 ms = 3 detik
+    </script>
+</body>
+</html>
